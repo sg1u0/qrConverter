@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <title>QRコード生成テスト</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="icon.png">
+</head>
+<body data-body="true">
+<form method="post">
+  <section class="hero is-small is-primary">
+    <div class="hero-body">
+      <div class="columns is-flex">
+        <div class="column">
+          <h1 class="title is-4">
+            <span>QRコード生成テスト</span>
+          </h1>
+        </div>
+       </div>
+    </div>
+  </section>
+  <main class="container" style="margin-top:10px">
+    <div class="box pb-6" >
+      <section style="border-bottom:solid 2px blue">
+        <h3 class="subtitle is-4 mb-2">入力テキスト</h3>
+      </section>
+      <section class="level-center mb-10 mt-0">
+        <div class="columns is-desktop">
+          <div class="column ">
+            <div class="field ">
+              <div class="field-body">
+                <div class="field">
+                  <p class="control is-expanded"> 
+                    <textarea id="inTxts" style="margin:2rem 0;" rows="10" cols="100" placeholder="任意のテキストを入力して下さい。"></textarea>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="is-flex is-justify-content-left">
+        <button class="button is-primary load-b" id="qrConv" type="button" style="margin:0 5rem 0 0" >QRコード生成</button>
+        <button class="button is-primary ">リセット</button>
+      </div>
+  </div>  
+    <div class="box">
+      <section style="border-bottom:solid 2px blue">
+        <h3 class="subtitle is-4 mb-2">出力結果</h3>
+      </section>
+      <section class="level-center mb-10 mt-0">
+        <div class="columns is-desktop">
+          <div class="column mb-3">
+              <div id="QR" style="display: block;">
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="./qrConvert.js"></script>
+</body> 
+</html>
